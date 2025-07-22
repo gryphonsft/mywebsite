@@ -1,25 +1,147 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="tr">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nazlıcan Esatoğlu</title>
+
+    <!-- Tailwind ve Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet" />
+
+    <style>
+        body {
+            font-family: 'Winky Rough', sans-serif;
+            background-color: rgb(233, 227, 221);
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+            padding: 0 20px;
+        }
+
+        .left-side {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .left-side img {
+            max-width: 450px;
+            height: auto;
+        }
+
+        .right-side {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-left: 40px;
+        }
+
+        .right-side h1 {
+            max-width: 600px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .right-side {
+                padding-left: 0;
+                padding-top: 20px;
+                text-align: center;
+            }
+
+            h1 {
+                font-size: 16px;
+            }
+        }
+        
+    </style>
 </head>
 
 <body>
-    <h1>Hello, world!</h1>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-sm p-4 mb-3 text-xl" style="background-color: #e9e3dd;">
+            <div class="container-fluid">
+                <a class="navbar-brand bg-stone-100 rounded-xl p-2" href="#">Uzm. Kln.Psikolog Nazlıcan Esatoğlu</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between ml-14" id="navbarNav">
+                    <ul class="navbar-nav flex-grow-1 space-x-8">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#">Ana Sayfa</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#">Hakkında</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#">Hizmetler</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#">İletişim</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-    <div class="card">
-        <div class="card-body">
-            This is some text within a card body.
+    <!-- Hero Section -->
+    <div class="flex justify-center items-center bg-stone-950" style="height: 200px;">
+        <section class="p-10">
+            <h1 class="text-center text-xl text-white">
+                Kendini anlamak, dönüşümün ilk adımıdır.<br />
+                Uzman Klinik Psikolog Nazlıcan Esatoğlu ile bireysel terapi.
+            </h1>
+            <h1 class="text-center p-1 mt-2 text-white bg-dark shadow-3xl text-3xl">
+                Nazlıcan ESATOĞLU
+            </h1>
+        </section>
+    </div>
+
+    <!-- Ana İçerik -->
+    <div class="container" style="margin-bottom: 50px;">
+        <div class="left-side">
+            <img src="imgnazlican.png" alt="Nazlıcan Esatoğlu">
+        </div>
+
+        <div class="right-side text-2xl">
+            <h1>
+                Psikoloji lisans eğitimini tamamladıktan sonra, klinik psikoloji yüksek lisans programını bitirerek bu
+                alandaki uzmanlığını sürdürmüştür. Eğitim süreci boyunca, özellikle psikodinamik kuram başta olmak üzere
+                çeşitli terapi yaklaşımlarına yönelik kuramsal bilgiler edinmiş ve uygulamalı süpervizyon temelli çalışmalar
+                gerçekleştirmiştir. Mesleki pratiğinde, bireylerin psikolojik süreçlerini bilimsel ve etik ilkeler
+                doğrultusunda ele alarak, duygusal güçlüklerin anlaşılması ve çözümlenmesine yönelik yapılandırılmış bir
+                terapi süreci sunmaktadır.
+            </h1>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-        crossorigin="anonymous"></script>
+
+    <!-- Footer -->
+    <footer class="footer text-muted py-4">
+        <div class="container flex flex-col items-center justify-center text-center">
+            Uzm. Kln. Psikolog Nazlıcan Esatoğlu Levent/Istanbul
+            <br />
+            psk.nazlicanesatogli@gmail.com
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
